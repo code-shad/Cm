@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shad's Dicey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,900;1,400&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+
+    <script src="https://kit.fontawesome.com/37ac40fdcc.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="">
+    <section id="landing-page">
+
+        <nav role="navigation" class="navbar navbar-expand-lg navbar-light navbar-dark" top navBar">
+            <div class="container-fluid navi-bar">
+                <a class="navbar-brand logo" href="">Shad</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav"
+                    aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse " id="navbar-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link controls nav-item ml-auto navItem" onclick="changePlayerNames()"
+                            href="#">Edit Player
+                            names</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link controls nav-item ml-auto navItem " id="roll" onclick="rollDice()"
+                            href="#">Play</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link controls nav-item ml-auto navItem" onclick="showScores()">See Scores</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </nav>
+
+
+        </div>
+        <!-- <div class="text-center buttons">
+        <button type="button" class="btn btn-secondary">Change Player Names</button>
+        <button type="button" class="btn btn-secondary">Roll Dice</button>
+    </div> -->
+
+        <h5 class="winner">Click Play to roll the dice!</h5>
+        <h4 class="play"><a href="#" onclick="rollDice()">PLAY!</a></h4>
+
+
+
+        </div>
+
+        <div class="playarea">
+            <div class="player1Info">
+                <div class="player-profile"><i class="fa fa-user player" aria-hidden="true"></i>
+                    <div class="row">
+
+                        <p class="player1"> Player 1</p>
+                    </div>
+                    <div class="row">
+                        <div>
+
+                        </div>
+
+                    </div>
+                    <div class="dice1 p1-dice face" id="p1-landing">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+                    <div class="dice p1-dice face" id="p1Face1">
+                        <span class="dot"></span>
+                    </div>
+                    <div class="dice p1-dice face" id="p1Face2">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="dice p1-dice face" id="p1Face3">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="dice p1-dice face" id="p1Face4">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+
+                    <div class="dice p1-dice face" id="p1Face5">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+
+
+                    <div class="dice p1-dice face" id="p1Face6">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="player2Info">
+                <div class="player-profile"><i class="fa fa-user player" aria-hidden="true"></i>
+                    <div class="row">
+                        <p class="player2"> Player 2</p>
+                    </div>
+                    <div class="dice1 p2-dice face" id="p2-landing">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+
+                    <div class="dice p2-dice face" id="p2Face1">
+                        <span class="dot"></span>
+                    </div>
+                    <div class="dice p2-dice face" id="p2Face2">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="dice p2-dice face" id="p2Face3">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="dice p2-dice face" id="p2Face4">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+
+                    <div class="dice p2-dice face" id="p2Face5">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+
+
+                    <div class="dice p2-dice face" id="p2Face6">
+
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <script src="index.js"></script>
+    </section>
+    <footer id="footer">
+        <div class="socials">
+            <i class="fa fa-twitter icon" aria-hidden="true"></i>
+            <i class="fa fa-facebook icon" aria-hidden="true"></i>
+            <i class="fa fa-instagram icon" aria-hidden="true"></i>
+            <i class="fa fa-envelope icon" aria-hidden="true"></i>
+        </div>
+        <p class="copyright">© Copyright 2022 Shad</p>
+
+    </footer>
+</body>
+
+</html>

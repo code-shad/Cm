@@ -1,0 +1,243 @@
+body{
+    background-color: #97d2ec !important;
+    margin: 0;
+    align-items: center;
+    height: 300px;
+}
+
+.header {
+    background-color: #97d2ec;
+    /* display: flex; */
+    padding: 0 8px;
+    margin: 0;
+    text-align: center;
+    line-height: 0;
+    font-family: "Montserrat";
+}
+.buttons {
+    display: inline-block;
+    text-align: center;
+    justify-items: flex-start;
+}
+.controls {
+    padding: 30px;
+}
+a {
+    padding: 0 30px;
+}
+button {
+    display: inline-block;
+    align-self: center;
+    justify-items: flex-start;
+}
+.welcome {
+    margin: auto;
+    font-size: 2rem;
+    text-align: center;
+   
+}
+.challenge {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.fa{
+    display: inline-block;
+    transform: scale(1.5);
+    padding: 8px 20px 0 20px;
+}
+.refreshText{
+    text-align: center;
+}
+
+.player2Info, .player1Info {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 0 180px;
+    margin: 0;
+}
+
+.player1, .player2{
+    text-align: center;
+    font-size: 25px;
+    font-family: "Montserrat";
+}
+
+.player {
+    transform: scale(0.8);
+}
+
+.playarea {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 0; 
+}
+
+.dice, .dice-onload{
+    position: absolute;
+    height:180px;
+    width: 180px;
+    background-color: white;
+    border-radius: 8%;
+    margin: 8px;
+    display: grid;
+}
+.dice{
+    position: absolute;
+    visibility: hidden;
+}
+
+.dice1 {
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    background-color: white;
+    border-radius: 8%;
+    margin: 8px;
+    display: grid;
+    align-self:center;
+}
+.face {
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "a . c"
+        "e g f"
+        "d . b";
+}
+
+
+.dot {
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 90%;
+}
+
+.dot:nth-child(2) {
+    grid-area: b;
+}
+
+.dot:nth-child(3) {
+    grid-area: c;
+}
+
+.dot:nth-child(4) {
+    grid-area: d;
+}
+
+.dot:nth-child(5) {
+    grid-area: e;
+}
+
+.dot:nth-child(6) {
+    grid-area: f;
+}
+
+.dot:nth-child(odd):last-child {
+    grid-area: g;
+}
+
+.winner {
+    position: relative;
+    visibility: visible;
+    font-size: 2rem;
+    font-size: "Montserrat";
+    text-align: center;
+    z-index: 1;
+    align-self: center;
+}
+
+/* .top {
+    padding: 0 10px 30px;
+} */
+
+.navItem {
+    padding: 0 30px;
+}
+.navBar{
+    background-color: #97d2ec;
+}
+
+#landing-page {
+    background-color: #97d2ec !important;
+}
+
+.player-profile {
+    padding: 0 40px;
+}
+#footer {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    display: block;
+    position: relative;
+    padding: 20% 30%;
+}
+
+.play {
+    text-align: center;
+}
+
+@media (max-width: 1080px) {
+    .player-profile {
+            padding: 0;
+        }
+    .dice,
+        .dice-onload {
+            position: relative;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border-radius: 8%;
+            display: grid;
+        }
+        .dot {
+            background-color: black;
+            width: 40px;
+            height: 40px;
+            border-radius: 90%;
+        }
+        /* .dice {
+            /* position: absolute; */
+            /* visibility: hidden; */
+        /* } */ 
+                .player2Info,
+                .player1Info {
+                    margin: 0;
+                    position: relative;
+                    text-align: center;
+                    align-self: center;
+                }
+
+        body {
+            align-items: left;
+            text-align: left;
+        }
+        h5 {
+            font-size: 1rem;
+            align-self: center;
+        }
+                .winner {
+                    position: relative;
+                    visibility: visible;
+                    font-size: "Montserrat";
+                    text-align: center;
+                    z-index: 1;
+                    align-self: center;
+                }
+    
+                                .playarea {
+                                    display: inline-block;
+                                    text-align: center;
+                                    position: relative;
+                                    width: 100%;
+                                    margin: auto;
+                                }
+}
